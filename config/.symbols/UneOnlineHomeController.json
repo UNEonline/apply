@@ -1,0 +1,223 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "c", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 3
+            }, 
+            "type": "Contact"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "step", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 4
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "stage", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 5
+            }, 
+            "type": "String"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "personalInfoComplete", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 7
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "academicInfoComplete", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 8
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "signatureComplete", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 9
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "programComplete", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 10
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "supportingFilesComplete", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 11
+            }, 
+            "type": "Boolean"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "UneOnlineHomeController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 13
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "UneOnlineHomeController", 
+    "tableDeclaration": {
+        "type": "UneOnlineHomeController", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "UneOnlineHomeController"
+    }, 
+    "key": "01pJ00000007TlaIAE", 
+    "variables": [
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 27
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "Application__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 38
+            }, 
+            "name": "app"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 34, 
+                "line": 39
+            }, 
+            "name": "appList"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 80
+            }, 
+            "name": "status"
+        }
+    ], 
+    "id": "01pJ00000007TlaIAE", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "forwardToStartPage", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 18
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "convertStatus", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "status"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 80
+            }, 
+            "returnType": "String", 
+            "type": null
+        }
+    ]
+}

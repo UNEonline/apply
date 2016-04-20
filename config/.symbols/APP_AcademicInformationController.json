@@ -1,0 +1,143 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "app", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 3
+            }, 
+            "type": "Application__c"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "isEducationProgram", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 4
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "step", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 5
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "APP_AcademicInformationController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 7
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "APP_AcademicInformationController", 
+    "tableDeclaration": {
+        "type": "APP_AcademicInformationController", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "APP_AcademicInformationController"
+    }, 
+    "key": "01pJ00000007UyVIAU", 
+    "variables": [
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 10
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 23
+            }, 
+            "name": "educationPrograms"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 38
+            }, 
+            "name": "pageRef"
+        }
+    ], 
+    "id": "01pJ00000007UyVIAU", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getIsEducationProgram", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 22
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "save", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 35
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }
+    ]
+}

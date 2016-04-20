@@ -1,0 +1,73 @@
+<apex:page standardStylesheets="false" sidebar="false" showheader="false" docType="html-5.0" controller="LoginController">
+
+	<c:Head />
+	<c:Header />
+	<body class="gpLogin-rm">		  
+
+		<div class="row wrapper">
+
+		  	<div class="col-md-8">
+				<h2>Apply to the College of Graduate and Professional Studies at the University of New England</h2>
+			 
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel panel-default login">
+							<apex:form >
+								<div class="panel-body">
+									<h3>New Applicants</h3>
+									<p>Start the application process by creating a new account.</p>
+									<apex:commandButton styleClass="btn btn-primary btn-block" tabindex="3" action="{!forwardToRegisterPage}" value="Create Account"/>
+								</div>
+							</apex:form>    
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="panel panel-default login">
+							<apex:form >
+								<div class="panel-body">
+									<h3>Returning Applicants</h3>
+									<ul>
+										<li>Upload your application profile</li>
+										<li>Upload your documents</li>
+										<li>Edit or submit existing application</li>
+										<li>Check the status of a submitted application</li>
+									</ul>
+									
+									<div class="error">
+										<apex:pageMessages id="error" />
+									</div>	
+
+									<div class="form-group">
+										 <div class="input-group">
+											  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+											  <apex:inputText styleClass="form-control" html-placeholder="Email" tabindex="1" value="{!username}"/>
+										 </div>
+									</div>
+
+									<div class="form-group">
+										 <div class="input-group">
+											  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+											  <apex:inputSecret styleClass="form-control" html-placeholder="Password" tabindex="2" value="{!password}"/>
+										 </div>
+									</div>
+										
+									<apex:commandButton styleClass="btn btn-primary btn-block" tabindex="3" action="{!login}" value="Login"/>
+									<small class="pull-right"><apex:outputLink value="{!$Page.ResetPassword}">Forgot your password?</apex:outputLink></small>
+								</div>
+							</apex:form>    
+						 </div>	
+					</div>
+				</div>
+			</div>
+
+		  	<div class="aside col-md-4">
+				<c:AsideHelp />
+		  	</div>
+
+		</div>		 
+		 
+		<c:Footer />
+	</body>
+
+</apex:page>

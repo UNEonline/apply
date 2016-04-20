@@ -1,0 +1,206 @@
+<apex:component controller="APP_SupportingFilesController" allowDML="true">
+
+	<h2>5. Supporting Documents</h2>
+
+	<apex:form styleClass="infoForm">
+		<div class="error">
+			<apex:pageMessages id="error" />
+		</div>			
+
+		<p class="intro">The following documents will need to be submitted to complete your application.  You can upload any documents you already have right away.  You can also log back in at a later time to upload additional documents as you complete them.</p> 
+
+		<fieldset class="documents-uploaded">
+			<legend>Documents uploaded by applicant</legend>
+
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+					  <tr>
+					    <th>Document Name</th>
+					    <th>Upload Date</th>
+					    <th>Received</th>
+					    <th></th>
+					    <th>Required</th>
+					  </tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Resume/CV 
+								<a id="popoverResume" class="btn" href="#" data-content="Please upload a current Resume or CV that includes your current professional roles and responsibilities." rel="popover" data-placement="bottom">
+									<span class="glyphicon glyphicon-info-sign"></span>
+								</a>
+							</td>
+							<td>
+							<apex:outputText value="{0,date,MM/dd/yy HH:mm:ss}"> 
+								<apex:param value="{!resume.LastModifiedDate}" />
+							</apex:outputText>	
+							</td>
+							<td>
+								<apex:inputCheckbox styleClass="file-upload" selected="true" rendered="{!NOT(ISNULL(resume.LastModifiedDate))}" />
+								<apex:inputCheckbox styleClass="file-upload" selected="false" rendered="{!ISNULL(resume.LastModifiedDate)}" />
+							</td>
+							<td><apex:inputFile value="{!resume.body}" id="file1" filename="{!resume.name}"/></td>
+							<td>Yes</td>
+						</tr>
+						<tr>
+							<td class="required">
+								References
+								<a id="popoverReferences" class="btn" href="#" data-content="Please upload a document listing at least three professional references, including relationship to you and contact information." rel="popover" data-placement="bottom">
+									<span class="glyphicon glyphicon-info-sign"></span>
+								</a>
+							</td>
+							<td>
+							<apex:outputText value="{0,date,MM/dd/yy HH:mm:ss}"> 
+								<apex:param value="{!reference.LastModifiedDate}" />
+							</apex:outputText>	
+							</td>
+							<td>
+								<apex:inputCheckbox styleClass="file-upload" selected="true" rendered="{!NOT(ISNULL(reference.LastModifiedDate))}" />
+								<apex:inputCheckbox styleClass="file-upload" selected="false" rendered="{!ISNULL(reference.LastModifiedDate)}" />
+							</td>
+							<td><apex:inputFile value="{!reference.body}" id="file3" filename="{!reference.name}"/></td>
+							<td>Yes</td>
+						</tr>
+						<tr>
+							<td>
+								Goal Statement/Essay
+								<a id="popoverEssay" class="btn" href="#" data-content="Please upload a goal statement 500 – 1000 words in length.  This statement should describe personal development and future goals; relevant professional experience; interest in graduate study in nutrition; and the capacity to succeed in a distance learning format, i.e., self-motivated, self-starter, comfortable with and access to a computer and the internet." rel="popover" data-placement="bottom">
+									<span class="glyphicon glyphicon-info-sign"></span>
+								</a>
+							</td>
+							<td>
+							<apex:outputText value="{0,date,MM/dd/yy HH:mm:ss}"> 
+								<apex:param value="{!statementEssay.LastModifiedDate}" />
+							</apex:outputText>	
+							</td>
+							<td>
+								<apex:inputCheckbox styleClass="file-upload" selected="true" rendered="{!NOT(ISNULL(statementEssay.LastModifiedDate))}" />
+								<apex:inputCheckbox styleClass="file-upload" selected="false" rendered="{!ISNULL(statementEssay.LastModifiedDate)}" />
+							</td>
+							<td><apex:inputFile value="{!statementEssay.body}" id="file2" filename="{!statementEssay.name}"/></td>
+							<td>Yes</td>
+						</tr>
+
+						<apex:outputPanel rendered="{!isEducationProgram}">
+						  <tr>
+						    <td>Teaching License</td>
+						    <td>
+							<apex:outputText value="{0,date,MM/dd/yy HH:mm:ss}"> 
+								<apex:param value="{!teachingLicense.LastModifiedDate}" />
+							</apex:outputText>	
+							</td>
+						    <td>
+						    	<apex:inputCheckbox styleClass="file-upload" selected="true" rendered="{!NOT(ISNULL(teachingLicense.LastModifiedDate))}" />
+						    	<apex:inputCheckbox styleClass="file-upload" selected="false" rendered="{!ISNULL(teachingLicense.LastModifiedDate)}" />
+						    </td>
+						    <td><apex:inputFile value="{!teachingLicense.body}" id="file4" filename="{!teachingLicense.name}"/></td>
+						    <td>Yes</td>
+						  </tr>
+						</apex:outputPanel>
+					</tbody>
+				</table>
+			</div>
+
+            <apex:commandButton styleClass="btn btn-primary pull-right" action="{!upload}" value="Upload" />
+		</fieldset>
+	</apex:form>
+	
+	<apex:form styleClass="infoForm">
+
+		<fieldset class="transcripts">
+			<legend>Transcripts</legend>
+
+			<p>Official transcripts must be submitted to UNE directly from the institution. Please contact your college or university as soon as possible and request that they send us an official transcript via mail at the address below or certified official electronic delivery.  We will notify you as soon as we receive your official transcript.</p>
+
+			<address>University of New England<br/>
+				Online Worldwide Learning<br/>
+				716 Stevens Avenue<br/>
+				Portland, ME 04103
+			</address>
+			
+			<p>Please Note:  A transcript showing conferral of your bachelor’s degree is required at a minimum; however, additional transcripts may be required or requested.  You can always submit additional transcripts if you feel they would strengthen your application.</p>
+			<p>If you are an international applicant, additional materials may be required to complete your application, such as proof of English Language Proficiency and verification of financial support. If you have completed your education internationally, UNE requires that your transcripts be translated and evaluated for U.S. equivalency.  Please refer to the <a href="http://online.une.edu/admissions/international-admission/" target="_blank">international admission requirements</a> for more information.</p>
+
+			<div class="table-responsive">
+				<table class="table table-responsive">
+					<thead>
+						<tr>
+							<th>Document Name</th>
+							<th></th>
+							<th>Received</th>
+							<th></th>
+							<th>Required</th>
+						</tr>
+					</thead>
+					<tbody>
+					  	<tr>
+						    <td>Bachelor’s Degree Transcripts</td>
+						    <td></td>
+						    <td>
+						    	<apex:inputField id="bTranscripts" value="{!app.Bachelors_Transcript_Received__c}" />
+						    </td>
+						    <td></td>
+						    <td>Yes</td>
+					  	</tr>				
+					</tbody>
+				</table>
+			</div>
+			
+		</fieldset>
+
+		<!--fieldset class="references">
+			<legend>References</legend>
+			<p>References should be emailed directly from your sponsor to <a href="mailto:owl-admission@une.edu">owl-admission@une.edu</a>.</p>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Document Name</th>
+						<th></th>
+						<th>Received</th>
+						<th></th>
+						<th>Required</th>
+					</tr>
+				</thead>
+				<tbody>
+				  	<tr>
+					    <td>Reference 1</td>
+					    <td></td>
+					    <td>					    	
+					    	<apex:inputField id="LOR1" value="{!app.LOR1_Received__c}" />
+					    </td>
+					    <td></td>
+					    <td>Yes</td>
+				  	</tr>				
+				  	<tr>
+					    <td>Reference 2</td>
+					    <td></td>
+					    <td>
+					    	<apex:inputField id="LOR2" value="{!app.LOR2_Received__c}" />
+					    </td>
+					    <td></td>
+					    <td>Yes</td>
+				  	</tr>				
+				  	<tr>
+					    <td>Reference 3</td>
+					    <td></td>
+					    <td>
+					    	<apex:inputField id="LOR3" value="{!app.LOR3_Received__c}" />
+					    </td>
+					    <td></td>
+					    <td>Yes</td>
+				  	</tr>				
+				</tbody>
+			</table>
+		</fieldset-->
+
+		<p>Please continue to log back into this application portal to check in on the status of your application.  An enrollment counselor will be reaching out to you along the way, to answer any questions and assist you in completing your application. <b>We wish you the best of luck in completing your application!</b></p>
+
+	</apex:form>
+
+	<script>
+	j$ = jQuery.noConflict();
+	j$('#popoverResume, #popoverReferences, #popoverEssay').popover({ trigger: "hover" });
+	</script>
+</apex:component>

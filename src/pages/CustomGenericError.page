@@ -1,0 +1,13 @@
+<apex:page showHeader="true" sidebar="true">
+<apex:outputText styleClass="title" value="{!$Label.site.error}">
+     <apex:param value="{!$Site.ErrorMessage}"/>
+     <!-- this parameter needs to be italic in the site.error label -->
+</apex:outputText>
+
+
+<apex:outputText styleClass="title" value="{!$Label.site.error}">
+   <apex:param value="{!$Site.ErrorDescription}"/>
+</apex:outputText>
+
+	
+</apex:page>

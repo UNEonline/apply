@@ -1,0 +1,40 @@
+<apex:component controller="APP_SignatureController" allowDML="true">
+
+	<h2>4. Signature</h2>
+
+	<apex:form styleClass="infoForm" html-novalidate="novalidate">
+		<p class="intro"></p>
+
+		<div class="error">
+			<apex:pageMessages id="error"/>
+		</div>	
+
+		<fieldset>
+			<div class="row">
+				<p class="col-sm-12">I certify that all of the information submitted in my application for admission is my own work, true and correct. I understand that any falsification of materials may result in refusal of admissions, or dismissal from the university.</p>
+			</div>		
+
+			<div class="form-group row">
+			    <label for="email" class="col-sm-4 control-label required">Typed Signature</label>
+			    <div class="col-sm-8">
+			      <apex:inputText styleClass="form-control" required="true" value="{!app.Electronic_signature__c}" html-form-required="required"/>
+			    </div>
+			</div>
+
+			<div class="form-group row">
+	            <div class="col-sm-offset-4 col-sm-8">
+	            	<!--apex:commandButton styleClass="btn btn-primary pull-right" tabindex="3" action="{!save}" value="Submit"/-->
+
+	            	<apex:commandButton id="goto-supporting-files" styleClass="btn btn-primary pull-right continue" action="{!save}" value="Save and Continue" rerender="all">
+					   <apex:param value="5" assignTo="{!step}"/>
+					</apex:commandButton>
+	            	<apex:commandButton styleClass="btn btn-primary pull-right" action="{!save}" value="Save" rerender="all">
+	            		<apex:param value="4" assignTo="{!step}"/>
+					</apex:commandButton>
+
+	            </div>	         
+	        </div> 
+        </fieldset>
+	</apex:form>
+
+</apex:component>

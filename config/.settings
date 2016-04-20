@@ -1,0 +1,19 @@
+{
+    "username": "mlorenzikayser1@une.edu.remiodev2", 
+    "project_name": "UNE apply - RemioDev2", 
+    "org_url": "", 
+    "namespace": "", 
+    "metadata_container": "1dcJ0000000EpSOIA0", 
+    "environment": "sandbox", 
+    "workspace": "/Library/WebServer/Development/application-portal", 
+    "id": "VM4JC10MR58OAQKG277FEA3TVYPXEFWM", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

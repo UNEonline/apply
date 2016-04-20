@@ -1,0 +1,105 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "app", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 3
+            }, 
+            "type": "Application__c"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "step", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 4
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "APP_SignatureController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 6
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "APP_SignatureController", 
+    "tableDeclaration": {
+        "type": "APP_SignatureController", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "APP_SignatureController"
+    }, 
+    "key": "01pJ00000007eW5IAI", 
+    "variables": [
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 7
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 13
+            }, 
+            "name": "pageRef"
+        }
+    ], 
+    "id": "01pJ00000007eW5IAI", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "save", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 11
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }
+    ]
+}

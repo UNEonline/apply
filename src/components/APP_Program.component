@@ -1,0 +1,39 @@
+<apex:component controller="APP_ProgramController" allowDML="true">
+
+		<h2>1. Program</h2>
+
+		<apex:form styleClass="infoForm" html-novalidate="novalidate">			
+			<p class="intro">Thank you for your interest in UNE Online!  This is your first step in completing your application to the University of New England.  Please select the program and term you would like to apply for and click "Save and Continue" to go to the second step. The Fall A 2016 term begins August 31, 2016.</p>
+
+			<div class="error"> 
+				<apex:pageMessages id="error" />
+			</div>				       
+
+			<fieldset>
+		        <div class="form-group row">
+				    <label for="program" class="col-sm-4 control-label required">Program</label>
+			    	<div class="col-sm-8">
+			    		<apex:inputField id="program" styleClass="form-control" value="{!app.Community_Program__c}" html-form-required="required" />
+		            </div>
+				</div>
+		        <div class="form-group row">
+		            <label for="startTerm" class="col-sm-4 control-label required">Start Term</label>
+		        	<div class="col-sm-8 startTermWrapper">
+		        		<apex:inputField id="startTerm" styleClass="startTerm" value="{!app.Community_Start_Term__c}" html-form-required="required" /> 
+		            </div>	         
+		        </div> 
+			    <div class="form-group row">
+		            <div class="col-sm-offset-4 col-sm-8">
+		            	<apex:commandButton id="goto-personal-info" styleClass="btn btn-primary pull-right continue" action="{!save}" value="Save and Continue" rerender="all">
+						   <apex:param value="2" assignTo="{!step}"/>
+						</apex:commandButton>
+		            	<apex:commandButton styleClass="btn btn-primary pull-right" action="{!save}" value="Save" rerender="all">
+		            		<apex:param value="1" assignTo="{!step}"/>
+						</apex:commandButton>
+		            </div>	         
+		        </div>  
+		    </fieldset>
+
+		</apex:form>
+
+</apex:component>

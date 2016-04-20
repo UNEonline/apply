@@ -1,0 +1,198 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "standardContactController", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 3
+            }, 
+            "type": "StandardController"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "contactController", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 38, 
+                "line": 4
+            }, 
+            "type": "StandardController"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "contact", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 5
+            }, 
+            "type": "Contact"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "ApplicationPDF", 
+            "parameters": [
+                {
+                    "type": "StandardController", 
+                    "name": "cntrl"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 7
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "ApplicationPDF", 
+    "tableDeclaration": {
+        "type": "ApplicationPDF", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "ApplicationPDF"
+    }, 
+    "key": "01pJ0000000UE6tIAG", 
+    "variables": [
+        {
+            "type": "StandardController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 53, 
+                "line": 7
+            }, 
+            "name": "cntrl"
+        }, 
+        {
+            "type": "Application__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 10
+            }, 
+            "name": "con"
+        }, 
+        {
+            "type": "Application__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 11
+            }, 
+            "name": "app"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 39, 
+                "line": 27
+            }, 
+            "name": "contactId"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 28
+            }, 
+            "name": "query"
+        }, 
+        {
+            "type": "FieldSetMember", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 29
+            }, 
+            "name": "f"
+        }
+    ], 
+    "id": "01pJ0000000UE6tIAG", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "doSaveAll", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 17
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getFields", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 23
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "getContactDetails", 
+            "parameters": [
+                {
+                    "type": "Id", 
+                    "name": "contactId"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 27
+            }, 
+            "returnType": "Contact", 
+            "type": null
+        }
+    ]
+}

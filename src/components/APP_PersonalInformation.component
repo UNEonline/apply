@@ -1,0 +1,238 @@
+<apex:component controller="APP_PersonalInformationController" allowDML="true">
+
+		<h2>2. Personal Information</h2>
+
+		<apex:form styleClass="infoForm" html-novalidate="novalidate">				  		
+ 			<p class="intro">Please fill in your personal, demographic and professional information below.  Once finished, click "Save and Continue" to go to the next step.</p>
+
+			<div class="error">
+				<apex:pageMessages id="error"/>
+			</div>	
+
+		  	<fieldset class="contact-information">
+  				<legend>Contact Information</legend>	  		
+		  		<div class="form-group row">
+				    <label for="firstName" class="col-sm-4 control-label required">First Name</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="fName" value="{!c.firstName}" label="First Name"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="middleName" class="col-sm-4 control-label">Middle Name</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" id="middleName" value="{!c.middleName}" label="Middle Name"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="lastName" class="col-sm-4 control-label required">Last Name</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="lastName" value="{!c.lastName}" label="Last Name"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="formerLastName" class="col-sm-4 control-label">Former Last Name</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" id="formerLastName" value="{!c.Former_Last_Name__c}" label="Former Last Name"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label required">Email</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="email" value="{!c.email}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="secondaryEmail" class="col-sm-4 control-label">Secondary Email</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" id="secondaryEmail" value="{!c.Secondary_Email__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="phone" class="col-sm-4 control-label required">Phone</label>
+				    <div class="col-sm-8">
+				      <!--apex:inputText styleClass="form-control" required="true" html-form-required="required" id="phone" value="{!c.phone}" /-->
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="phone" value="{!c.homePhone}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="address-street" class="col-sm-4 control-label required">Street</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="address-street" value="{!c.mailingStreet}" label="Street"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="address-city" class="col-sm-4 control-label required">City</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="address-city" value="{!c.mailingCity}" label="City"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="address-zip" class="col-sm-4 control-label required">Zip/Postal Code</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" id="address-zip" value="{!c.mailingPostalCode}" label="Zip"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="address-country" class="col-sm-4 control-label required">Country</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control" required="true" html-form-required="required" id="address-country" value="{!c.mailingCountryCode}" label="Country"/>
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="address-state" class="col-sm-4 control-label required">State</label>
+				    <div class="col-sm-8 stateWrapperSelect">
+				      <!--apex:inputField styleClass="form-control" required="true" id="address-state" value="{!c.mailingStateCode}" label="State"/-->
+				      <apex:inputField styleClass="form-control" id="address-state" value="{!c.mailingStateCode}" label="State"/>
+				    </div>
+				</div>
+			</fieldset>
+
+			<fieldset class="misc-information">
+  				<legend>Demographic Information</legend>
+				<div class="form-group row">
+				    <label for="birthdate" class="col-sm-4 control-label required">Date of Birth</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control" required="true" html-form-required="required" value="{!c.Birthdate}" />
+				      <!--
+				      <apex:inputText styleClass="form-control birthdate" required="true" html-form-required="required" id="birthdate" value="{!birthdate}" />
+				      -->
+				      
+				    </div>
+				</div>
+				<div class="form-group row">
+		            <label class="col-sm-4 control-label required">Gender</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="gender" styleClass="form-control" value="{!c.Gender__c}" html-form-required="required" />
+		            </div>	         
+		        </div> 
+		        <div class="form-group row">
+		            <label class="col-sm-4 control-label required">Country of Birth</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="countryOfBirth" styleClass="form-control" value="{!c.Country_of_Birth__c}" html-form-required="required" />
+		        	</div>
+		        </div>
+		        <div class="form-group row">
+		            <label class="col-sm-4 control-label required">Native Language</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="nativeLanguage" styleClass="form-control" value="{!c.Native_Language__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+		        <div class="form-group row">
+		            <label class="col-sm-4 control-label required">Ethnicity</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="ethnicity" styleClass="form-control" value="{!c.Ethnicity__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+		        <div class="form-group row">
+		            <label class="col-sm-4 control-label required">Are you Hispanic/Latino?</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="hispanicLatino" styleClass="form-control" value="{!c.Hispanic_Latino__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+		        <div class="form-group row">
+		            <label class="col-sm-4 control-label required">Citizenship</label>
+		        	<div class="col-sm-8">
+		        		<apex:inputField id="citizenship" styleClass="form-control" value="{!c.Citizenship__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+				<div class="form-group row">
+		            <label class="col-sm-9 control-label required">U.S. Military or Veteran</label>
+		        	<div class="col-sm-3">
+				      <apex:inputField id="military" styleClass="form-control" required="true" value="{!app.Military__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+		        <div class="form-group row">
+		            <label class="col-sm-9 control-label required">Are you a spouse or dependent of a current U.S. Military Service member or Veteran?</label>
+		        	<div class="col-sm-3">
+				      <apex:inputField id="spouse-military" styleClass="form-control" required="true" value="{!app.Spouse_Dependant_Military__c}" html-form-required="required" />
+		            </div>	         
+		        </div>	   	
+				<div class="form-group row">
+		            <label class="col-sm-7 control-label required">How did you hear about this program at UNE?</label>
+		        	<div class="col-sm-5">
+				      <apex:inputField id="how-did-you-hear" styleClass="form-control" required="true" value="{!app.Text_How_did_you_hear_about_us__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+		    </fieldset>
+
+			<fieldset class="emergency-contact">
+  				<legend>Emergency Contact</legend>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label required">Name</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" value="{!c.Emergency_Contact_Name__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label required">Relationship</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" value="{!c.Emergency_Contact_Relationship__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label required">Address</label>
+				    <div class="col-sm-8">
+				      <apex:inputTextarea styleClass="form-control" required="true" html-form-required="required" value="{!c.Emergency_Contact_Address__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label required">Phone</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" required="true" html-form-required="required" value="{!c.Emergency_Contact_Phone__c}" />
+				    </div>
+				</div>
+			</fieldset>
+
+			<fieldset class="license-history">
+  				<legend>Professional License Information</legend>
+				<div class="form-group row">
+		            <label class="col-sm-9 control-label required">Have you ever held a professional license?</label>
+		        	<div class="col-sm-3">
+		        		<apex:inputField id="license" styleClass="form-control" value="{!app.License__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+				<div class="form-group row">
+				    <label for="license-explain" class="col-sm-4 control-label">If yes, explain and indicate date and state</label>
+				    <div class="col-sm-8">
+				      <apex:inputTextarea styleClass="form-control" value="{!app.License_Explain__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+		            <label class="col-sm-9 control-label required">Has your professional license ever been suspended or revoked</label>
+		        	<div class="col-sm-3">
+		        		<apex:inputField id="license-revoked" styleClass="form-control" value="{!app.License_Suspended_Revoked__c}" html-form-required="required" />
+		            </div>	         
+		        </div>
+				<div class="form-group row">
+				    <label for="revoked-explain" class="col-sm-4 control-label">If yes, explain and indicate date and state</label>
+				    <div class="col-sm-8">
+				      <apex:inputTextarea id="revoked-explain" styleClass="form-control" value="{!app.License_Suspended_Revoked_Explain__c}" />
+				    </div>
+				</div>
+	        </fieldset>	        
+
+	        <div class="form-group row">
+	            <div class="col-sm-offset-4 col-sm-8">
+					<apex:commandButton id="goto-academic-info" styleClass="btn btn-primary pull-right continue" action="{!save}" value="Save and Continue" rerender="all">
+						<apex:param value="3" assignTo="{!step}"/>
+					</apex:commandButton>
+		            <apex:commandButton styleClass="btn btn-primary pull-right" action="{!save}" value="Save" rerender="all">
+		            	<apex:param value="2" assignTo="{!step}"/>
+					</apex:commandButton>
+	            </div>	         
+	        </div>    		
+
+		</apex:form>
+
+		<script type="text/javascript">
+			j$ = jQuery.noConflict();
+
+			/*
+			j$('.birthdate').datepicker({
+    			orientation: "bottom right",
+    			format: 'm/d/yyyy'
+			});
+			*/			
+		</script>
+
+</apex:component>

@@ -1,0 +1,431 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/components/APP_SupportingFiles.component",
+			"settings":
+			{
+				"buffer_size": 7737,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/Footer.component",
+			"settings":
+			{
+				"buffer_size": 13897,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/SiteHeader.component-meta.xml",
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/APP_Program.component",
+			"settings":
+			{
+				"buffer_size": 1922,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 367.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components"
+	],
+	"file_history":
+	[
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/APP_Program.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/pages/UneOnlineHome.page",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/APP_PersonalInformation.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/APP_AcademicInformation.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/APP_Signature.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/APP_SupportingFiles.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/Head.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_AcademicInformationController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_ProgramController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_SupportingFilesController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_SignatureController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/UneOnlineHomeController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/Footer.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/AsideHelp.component",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_PersonalInformationController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/APP_PersonalInformationController.cls-meta.xml",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/pages/Login.page",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/LoginController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/MyProfilePageController.cls",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/pages/Register.page",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/pages/ResetPassword.page",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/classes/ChatterAnswersCreateAccountTest.cls-meta.xml",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/src/components/Header.component",
+		"/Users/mlorenzikayser/Library/Application Support/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/Users/mlorenzikayser/Library/Application Support/Sublime Text 3/Packages/MavensMate/mavensmate.sublime-settings",
+		"/Library/WebServer/Development/application-portal/UNE apply - RemioDev2/UNE apply - RemioDev2.sublime-settings",
+		"/Users/mlorenzikayser/Library/Application Support/Sublime Text 3/Packages/User/mavensmate.sublime-settings",
+		"/Library/WebServer/Development/application-portal/Application Portal - Manuela Sbox/src/components/Header.component",
+		"/Library/WebServer/Development/application-portal/Application Portal - Manuela Sbox/src/pages/Login.page",
+		"/Library/WebServer/Development/application-portal/Application Portal - Manuela Sbox/src/components/Head.component",
+		"/Library/WebServer/Development/application-portal/Application Portal - Manuela Sbox/src/components/Footer.component",
+		"/Library/WebServer/Development/application-portal/Application Portal - Manuela Sbox/src/pages/Register.page",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/components/APP_PersonalInformation.component",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/components/Footer.component",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/components/APP_Program.component",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/components/SiteHeader.component",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/components/Header.component",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/classes/APP_PersonalInformationController.cls",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/pages/MyProfilePage.page-meta.xml",
+		"/Library/WebServer/Development/application-portal/UNEonline Application Portal/src/pages/IdeasHome.page",
+		"/Users/mlorenzikayser/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mlorenzikayser/Downloads/jquery-validation-1.13.1/README.md",
+		"/Users/mlorenzikayser/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/mlorenzikayser/wp-efka/wp-cron.php",
+		"/Users/mlorenzikayser/Google Drive/Portal - students/dev/index.php",
+		"/Users/mlorenzikayser/Google Drive/EFKA/wordpress-template/index.php",
+		"/Users/mlorenzikayser/Google Drive/EFKA/html/index.php",
+		"/Users/mlorenzikayser/Google Drive/Portal - students/html/index.php",
+		"/Users/mlorenzikayser/Library/Caches/TemporaryItems/Outlook Temp/screen[2].css",
+		"/Users/mlorenzikayser/Library/Caches/TemporaryItems/Outlook Temp/screen[1].css",
+		"/Users/mlorenzikayser/Library/Caches/TemporaryItems/Outlook Temp/screen.css",
+		"/Users/mlorenzikayser/Google Drive/Portal/dev/html/public-health.php",
+		"/Users/mlorenzikayser/Google Drive/Portal/dev/html/index.php",
+		"/Users/mlorenzikayser/Google Drive/Portal/dev/us-map-1.0.1/Readme.markdown",
+		"/Users/mlorenzikayser/Google Drive/Portal/dev/clickableMap/clickableMap.php",
+		"/Users/mlorenzikayser/Google Drive/Portal/dev/bootstrap/index.php",
+		"/Users/mlorenzikayser/Google Drive/resources/frameworks/foundation-master/run-tests.sh",
+		"/Users/mlorenzikayser/Google Drive/resources/frameworks/foundation-compass-template-master/config.rb",
+		"/Users/mlorenzikayser/Google Drive/resources/frameworks/bootstrap-master/README.md",
+		"/Users/mlorenzikayser/Downloads/mrmrs-colors-ef176f8/css/colors.css",
+		"/Users/mlorenzikayser/Downloads/Emmet.codaplugin/README.md"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"birthdate",
+			"form",
+			"check",
+			"NULL",
+			"masterTranscripts",
+			"getIsEducationProgram",
+			"Education",
+			"pageMessage",
+			"isEducationProgram",
+			"sEducationProgram",
+			"birth",
+			"container",
+			"forms-container",
+			".active",
+			"Application_Status",
+			"Application_status",
+			"status",
+			"stage",
+			"step",
+			"forms-container",
+			"footer",
+			"status-tracker",
+			"help",
+			"aside",
+			"footer",
+			"outline",
+			"role",
+			"fieldset",
+			"forward"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/components/APP_SupportingFiles.component",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7737,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6126,
+								6126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/components/Footer.component",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/SiteHeader.component-meta.xml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/APP_Program.component",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								477,
+								477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 309.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "UNE apply - RemioDev2.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 363.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

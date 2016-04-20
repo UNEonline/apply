@@ -1,0 +1,332 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "app", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 3
+            }, 
+            "type": "Application__c"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "reference", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 5
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "statementEssay", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 6
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "resume", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 7
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "teachingLicense", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 8
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "bachelorTranscripts", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 9
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "masterTranscripts", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 10
+            }, 
+            "type": "Attachment"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "attachments", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 12
+            }, 
+            "type": "LIST"
+        }, 
+        {
+            "modifiers": [
+                "private"
+            ], 
+            "name": "idToBlob", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 13
+            }, 
+            "type": "Map"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "isEducationProgram", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 15
+            }, 
+            "type": "Boolean"
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "requireLOR", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 16
+            }, 
+            "type": "Boolean"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "APP_SupportingFilesController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 9, 
+                "line": 18
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "APP_SupportingFilesController", 
+    "tableDeclaration": {
+        "type": "APP_SupportingFilesController", 
+        "modifiers": [
+            "public", 
+            "with sharing"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 27, 
+            "line": 1
+        }, 
+        "name": "APP_SupportingFilesController"
+    }, 
+    "key": "01pJ00000007VSBIA2", 
+    "variables": [
+        {
+            "type": "User", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 8, 
+                "line": 21
+            }, 
+            "name": "u"
+        }, 
+        {
+            "type": "Contact", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 22
+            }, 
+            "name": "c"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 36
+            }, 
+            "name": "uploadedAttachments"
+        }, 
+        {
+            "type": "Map", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 44
+            }, 
+            "name": "nameToAttachment"
+        }, 
+        {
+            "type": "Attachment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 48
+            }, 
+            "name": "a"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 69
+            }, 
+            "name": "attachmentsToUpsert"
+        }, 
+        {
+            "type": "Attachment", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 72
+            }, 
+            "name": "a"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 20, 
+                "line": 97
+            }, 
+            "name": "pr"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 105
+            }, 
+            "name": "educationPrograms"
+        }, 
+        {
+            "type": "Set", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 117
+            }, 
+            "name": "LORprograms"
+        }
+    ], 
+    "id": "01pJ00000007VSBIA2", 
+    "methods": [
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "upload", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 67
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getIsEducationProgram", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 104
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "public"
+            ], 
+            "name": "getRequireLOR", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 116
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }
+    ]
+}

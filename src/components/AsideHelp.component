@@ -1,0 +1,16 @@
+<apex:component >
+
+	<section class="help col-md-12">
+	    <h3>Need Help?</h3>
+	    <p>Our Enrollment Counselors are here to help you understand the admission requirements and assist you throughout the entire application process. Please contact us right away at (855) 751-4447   or e-mail <a href="mailto:nutrition@une.edu">nutrition@une.edu</a> if you have any questions about the program or application requirements.</p>
+
+	    <h3>General Information</h3>
+	    <p>
+	    <a href="http://online.une.edu/online-learning/" target="_blank">About Online Learning at UNE</a><br />
+		<a href="http://online.une.edu/about/about-owl/" target="_blank">About the UNE Online Team</a><br />  
+		<a href="http://www.une.edu/sfs/online" target="_blank">Tuition and Financial Aid</a><br />
+		<a href="http://online.une.edu/admissions/international-admission/" target="_blank">International Admissions</a>
+		</p>
+	</section>
+  
+</apex:component>

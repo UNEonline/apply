@@ -1,0 +1,113 @@
+<!--<apex:page standardController="Application__c" extensions="ApplicationPDF" standardStylesheets="false" sidebar="false"  showheader="false">-->
+<apex:page standardController="Application__c" extensions="ApplicationPDF"  renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+
+<head>
+	
+	<apex:stylesheet value="{!URLFOR($Resource.Bootstrap, '/bootstrap/css/bootstrap.min.css')}"/>	
+	<style type="text/css">
+		h1 {
+			font-size: 2em;
+		}
+		h2 {
+			font-size: 1.4em;
+		}
+		h1, h2 {
+			margin-bottom: .5em;
+			margin-top: 1em;	
+		}
+		.row-label {
+			font-weight: bold;
+			padding-bottom: 5px;
+			padding-right: 20px;
+		}
+	</style>
+
+</head>
+<body>
+
+	<apex:image url="{!URLFOR($Resource.styles, 'styles/assets/images/pdf-logo.jpg')}" styleClass="logo"/>
+
+    <h1>{!contact.Name}</h1>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Program_Info}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>
+
+	<h2>Contact Information</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Personal_Info}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>	
+
+	<h2>Demographic Info</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Demographic_Info}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	        <apex:column headerValue=" ">
+	         	<apex:outputField value="{!Application__c[f]}" />
+	         	<!--apex:outputText value="{!IF(!Application__c[f] == 'Birthdate'), , }"></apex:outputText>
+	         	<apex:outputText value="{0,date,MM.dd.yyyy}">
+    				<apex:param value="{!Application__c[f]}" />
+				</apex:outputText-->
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>
+
+    <h2>Emergency Contact</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Emergency_Contact}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>		
+
+    <h2>Professional License Information</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Professional_License_Info}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>		
+
+    <h2>Academic Information</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Academic_Info}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>	
+
+    <h2>Signature</h2>
+    <apex:pageBlock>
+	    <apex:pageBlockTable value="{!$ObjectType.Application__c.FieldSets.APP_PDF_Signature}" var="f">
+	        <apex:column styleClass="row-label" value="{!f.Label}" headerValue=" ">
+	        </apex:column>
+	         <apex:column headerValue=" ">
+	         	<apex:outputText value="{!Application__c[f]}" />
+	        </apex:column>
+	    </apex:pageBlockTable>
+	</apex:pageBlock>	
+
+</body>
+	
+</apex:page>

@@ -1,0 +1,181 @@
+<apex:component controller="APP_AcademicInformationController" allowDML="true">
+
+	<h2>3. Academic Information</h2>
+
+	<apex:form styleClass="infoForm" html-novalidate="novalidate">		
+		<p class="intro">Please fill in information for all College or Universities you have previously attended, including any degrees you have conferred and years you attended.  Be sure to click on the "Add Institution" if you attended more than one institution. Once finished, click "Save and Continue" to go to the next step.</p>
+
+		<div class="error">
+			<apex:pageMessages id="error"/>
+		</div>	
+		
+		<fieldset class="previous-colleges">
+			<legend>Previous Colleges/Universities</legend>
+
+			<div id="first-institution">
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Institution</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" value="{!app.Institution_1__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Degree Conferred</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" value="{!app.Degree_Conferred_1__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended From</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control" value="{!app.Year_Attended_1_From__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended To</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control" value="{!app.Year_Attended_1_To__c}" />
+				    </div>
+				</div>
+			</div>
+
+			<div id="second-institution">
+				<h3>Second Institution</h3>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Institution</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" value="{!app.Institution_2__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Degree Conferred</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control" value="{!app.Degree_Conferred_2__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended From</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control"  value="{!app.Year_Attended_2_From__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended To</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control"  value="{!app.Year_Attended_2_To__c}" />
+				    </div>
+				</div>
+			</div>
+
+			<div id="third-institution">
+				<h3>Third Institution</h3>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Institution</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control"  value="{!app.Institution_3__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Degree Conferred</label>
+				    <div class="col-sm-8">
+				      <apex:inputText styleClass="form-control"  value="{!app.Degree_Conferred_3__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended From</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control"  value="{!app.Year_Attended_3_From__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+				    <label for="email" class="col-sm-4 control-label">Year Attended To</label>
+				    <div class="col-sm-8">
+				      <apex:inputField styleClass="form-control"  value="{!app.Year_Attended_3_To__c}" />
+				    </div>
+				</div>
+			</div>
+
+			<p id="add-institution" href="#" style="cursor:pointer;color:#428bca">+ Add Institution</p>
+		</fieldset>
+
+		<apex:outputPanel rendered="{!isEducationProgram}">
+			<fieldset class="education-info">
+				<legend>Education Program Information</legend>	
+
+				<div class="form-group row">
+				    <label for="email" class="col-sm-9 control-label required">I verify that I am and will be employed in an educational setting</label>
+				    <div class="col-sm-3">
+				      <apex:inputCheckbox html-form-checkbox-required="required" value="{!app.Classroom_Access_Verification__c}" />
+				    </div>
+				</div>
+				<div class="form-group row">
+		            <label class="col-sm-9 control-label required">Are you currently employed as a classroom teacher?</label>
+		        	<div class="col-sm-3">
+		        		<apex:inputField id="classroom-teacher" styleClass="form-control" value="{!app.Employed_as_Teacher__c}" html-form-required="required" />
+		            </div>	         
+		        </div> 
+		        <div class="form-group row">
+		            <label for="years-teaching" class="col-sm-9 control-label">If yes, how many years have you been teaching? </label>
+		        	<div class="col-sm-3">
+		        	<apex:inputField id="years-teaching" styleClass="form-control" value="{!app.How_many_years_teaching__c}" />
+		            </div>	         
+		        </div>
+		        <div class="row">
+					<label class="col-sm-12 control-label">If no, please explain how you plan to meet the following requirements:</label>
+				</div>
+				<div class="form-group row">		
+				    <span class="col-sm-12" style="margin-bottom: 10px;">1. You may need access to classroom assessment data, standardized test data, or commonly developed and scored assessments to answer this question. </span>
+				    <span class="col-sm-12" style="margin-bottom: 10px;">2. Assignments that involve curriculum and instruction: What is the adopted curriculum of your school or district? What training goes with it? Who is responsible for choosing and reviewing it? Beyond a traditional classroom setting, other school personnel such as school counselors, librarians often have curricular responsibilities. Other topics central to your school setting might cover how is instruction evaluated? How are new teachers mentored?</span>
+				    <span class="col-sm-12" style="margin-bottom: 10px;">3. Some courses may require that you create, utilize or reflect upon collections of your professional work. This could include lesson and unit plans, strategic plans for faculty development, presentations to colleagues, or committee work.</span>
+				    <div class="col-sm-12">
+				      <apex:inputTextarea styleClass="form-control"  value="{!app.Employed_as_Teacher_Explain__c}" rows="6"/>
+				    </div>
+				</div>
+				<div class="row"> 
+					<div class="col-sm-12">
+					<span>Please note that only the Certificate of Advanced Graduate Study (CAGS) in Advanced Educational Leadership is an approved program leading to administrator certification in the State of Maine.  Also note that only the Master of Science in Education – Reading Specialist program directly leads to Literacy Specialist certification in the State of Maine.  If you are interested in pursuing certification after completing a different program or concentration, or if you reside in a different state, it is strongly recommended that you contact your state’s Department of Education for certification requirements.</span>
+					</div>
+				</div>
+				<div class="form-group row required">
+				    <label for="email" class="col-sm-9 control-label">I have read and understood this statement:</label>
+				    <div class="col-sm-3">
+				      <apex:inputCheckbox html-form-checkbox-required="required"  value="{!app.Certification_Verification__c}" />
+				    </div>
+				</div>
+			</fieldset>
+		</apex:outputPanel>
+
+		<div class="form-group row">
+            <div class="col-sm-offset-4 col-sm-8">
+            	<apex:commandButton id="goto-supporting-files" styleClass="btn btn-primary pull-right continue" action="{!save}" value="Save and Continue" rerender="all">
+				   <apex:param value="4" assignTo="{!step}"/>
+				</apex:commandButton>
+            	<apex:commandButton styleClass="btn btn-primary pull-right" action="{!save}" value="Save" rerender="all">
+            		<apex:param value="3" assignTo="{!step}"/>
+				</apex:commandButton>
+            </div>	         
+        </div> 
+
+	</apex:form>
+
+	<script type="text/javascript">
+
+		j$ = jQuery.noConflict();
+
+		if('{!app.Institution_2__c}' == '')
+			j$('#second-institution').hide();
+		if('{!app.Institution_3__c}' == '')
+			j$('#third-institution').hide();
+
+		j$('#add-institution').click(function(){
+			if(j$('#second-institution').is(':hidden')){
+				j$('#second-institution').show();
+			}else {
+				j$('#third-institution').show();
+				j$('#add-institution').hide();
+			}
+		});
+
+	</script>
+
+</apex:component>

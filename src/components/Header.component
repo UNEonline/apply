@@ -1,0 +1,20 @@
+<apex:component >
+
+	<header>
+		<nav>
+			<div class="row wrapper">
+				<div class="col-md-8">
+					<apex:outputLink value="{!$Page.UneOnlineHome}"><apex:image url="{!URLFOR($Resource.styles, 'styles/assets/images/logo.jpg')}" styleClass="logo"/></apex:outputLink>
+				</div>
+
+				<div class="col-md-4">
+					<div class="pull-right loginout">
+						<apex:outputLink value="{!$Site.Prefix}/secur/logout.jsp" rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}"><i class="fa fa-sign-out"></i> Logout</apex:outputLink>
+						<apex:outputText value=" {!$User.FirstName} {!$User.LastName}" rendered="{!NOT(ISPICKVAL($User.UserType,'Guest'))}" />			
+					</div>	
+				</div>
+			</div>
+		</nav>	
+	</header>
+
+</apex:component>

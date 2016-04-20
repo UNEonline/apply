@@ -1,0 +1,386 @@
+<apex:component >
+    <head>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{!$CurrentPage.Name}</title>
+
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,600,700,800" type="text/css" rel="stylesheet" />
+        <!--<link rel="stylesheet" href="{!URLFOR($Resource.styles, 'styles/css/style.css')}" />-->
+
+        <style>
+            h1,h2,h3,h4,h5,h6 {
+              margin-bottom:.7em;
+              line-height:1.2;
+            }
+            h1 {font-size:2.4rem;}
+            h2 {font-size:2.0rem;}
+            h3 {font-size:1.75rem;}
+            h4 {font-size:1.25rem;}
+            h5 {font-size:1rem;}
+            h6 {font-size:0.85rem;}
+
+            h3:first-of-type {
+              margin-top: 0px; 
+            }
+            h3 {
+              margin-bottom: 25px;
+              margin-top: 40px;
+            }
+
+            html {
+              background-color:#003068;
+            }
+            .wrapper {
+                position:relative;
+                /*overflow:hidden;*/
+                width:75%;
+                margin:0 auto;          
+            }
+            @media screen and (max-width: 991px) {
+              .wrapper {
+                  width:100%;
+               }
+            }
+           [class^="col-md-"] {
+              /*outline:1px solid red;*/
+              padding-bottom:20px;
+            }
+
+            .logo {
+              margin: 10px 0; 
+            }
+            .login small {
+              margin:1em 0;
+            }
+            .loginout {
+              margin-top:20px;
+            }
+
+            nav {
+              border-top: 20px solid #003068;
+              border-bottom: 1px solid #003068;
+              box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2); 
+            }
+
+            footer {
+              background-color:#003068; 
+              padding-top: 20px;
+              height: 100%; 
+              color: #fff;
+            }   
+
+            /* aside */
+            .aside {          
+              /*min-height:525px; 
+              min-height:650px;
+              min-height:100%;*/
+              padding-top:20px; padding-bottom:20px;
+              background-color:#f1f5fb;             
+            }
+            .help {
+              min-height:100%;
+              background-color:#f1f5fb;
+            }
+            .summary {
+              /*overflow:hidden;*/
+            }
+            .application-status {
+              padding-bottom:20px;
+            }
+            .application-status [class^="col-md-"] {
+              padding-bottom:0;
+            }
+            .application-status table {
+              width:100%;
+            }
+
+            /* forms */
+            .forms-container {
+              padding-bottom:2em;
+            }
+            form section {
+              border:1px solid lightgrey;
+              padding:1em;
+              margin-bottom:2em;
+            }
+            fieldset {
+              overflow:hidden;
+              margin-top:2em; margin-bottom:1em;
+            }
+            .error {
+              /*margin-bottom:2em;*/
+             }
+             .error .message { 
+              padding:15px;
+              margin-bottom:1em;
+              border-radius:5px;
+              background-color:#F2DEDE;
+              color:#A94442;
+            }
+            .error h4 {
+              display:inline;
+              margin-right:.5em;
+              font-size:1em;
+            }
+
+            .form-control:last-child {
+              border-radius: 4px; 
+            }
+
+            button.continue,
+            input.continue {
+              margin-left:2em;
+            }
+            .btn-primary {
+              background-color: #fa6415;
+              border-color: #e25b14; 
+            }
+            .btn-primary:hover, 
+            .btn-primary:focus, 
+            .btn-primary:active, 
+            .btn-primary.active, 
+            .open .dropdown-toggle.btn-primary {
+              background-color: #e35b14;
+              border-color: #e25b14; border-color:#cc5212;
+            }
+            .btn-info {
+              background-color:#428bca;
+              border-color:#3b90d6;
+            }
+            .btn-info:hover, 
+            .btn-info:focus, 
+            .btn-info:active, 
+            .btn-info.active, 
+            .open .dropdown-toggle.btn-info {
+              background-color: #3a79b0;
+              border-color: #3b90d6; 
+            }
+
+            /* panel ------------- */
+            .panel-body h2 {
+              margin: 0 0 20px 0;
+              text-align: center;
+              color: #11284e; 
+            }
+            .panel-body ul {
+              -webkit-padding-start: 15px;
+              margin-bottom: 20px; 
+            }
+     
+            /* status-tracker */
+            .status-tracker .nav>li>a:hover, 
+            .status-tracker .nav>li>a:focus, 
+            .status-tracker .nav-pills>li.active>a, 
+            .status-tracker .nav-pills>li.active>a:hover, 
+            .status-tracker .nav-pills>li.active>a:focus {
+              background-color: transparent;
+              text-decoration: none;
+            }
+            .status-tracker {
+              margin-bottom: 50px;
+            }
+            .status-tracker ul {
+              -moz-padding-start: 0px;
+              -webkit-padding-start: 0px;
+              -khtml-padding-start: 0px;
+              -o-padding-start: 0px;
+              padding-start: 0px;
+              padding: 0px;
+            }
+            .status-tracker .nav-pills>li+li {
+              margin-left: 0 !important;
+            }
+            .status-tracker li.active .step {
+              background: #91fa15 none repeat scroll 0 0; 
+              background-color: #16e220;
+              background-color: #68d845;
+              background-color: #00db34;
+              border: 3px solid #55606e; 
+              border-color: #55606e;
+              border-radius: 50%;
+              color: #fff;
+              font-size: 15px;
+              font-weight: 700;
+              padding: 10px 20px;
+            }
+            .status-tracker li.active .step.bg-success {
+              padding: 16px 20px;
+            }
+            .status-tracker li .step.bg-success {
+              background: #fff;
+              padding: 10px 20px;
+            }
+            .status-tracker li {
+              display: block;
+              float: left;
+              width: 33%;
+              text-align: center;
+              padding-left: 0;
+            }
+            .status-tracker li .step {
+              background: #fff;
+              color: #FFF;
+              display: inline;
+              font-size: 15px;
+              font-weight: 700;
+              padding: 10px 20px;
+              border: 2px solid #55606e;
+              border-radius: 50%;
+              line-height: normal;
+              position: relative;
+              text-align: center;
+              z-index: 2;
+              -webkit-transition: all .1s linear 0s;
+              transition: all .1s linear 0s;
+            }
+            .status-tracker li:before {
+              border-top: 3px solid #55606E; 
+              content: "";
+              display: block;
+              font-size: 0;
+              overflow: hidden;
+              position: relative;
+              top: 12px;
+              right: 1px;
+              width: 100%;
+              z-index: 1;
+            }
+            .status-tracker li:first-child:before {
+              left: 50%;
+              max-width: 50%;
+            }
+            .status-tracker li:last-child:before {
+              max-width: 50%;
+              width: 50%;
+            }
+            .status-tracker li .title {
+              color: #5d6f85;
+              display: block;
+              font-size: 13px;
+              line-height: 15px;
+              max-width: 100%;
+              position: relative;
+              table-layout: fixed;
+              text-align: center;
+              top: 25px;
+              word-wrap: break-word;
+              z-index: 104;
+            }
+            .status-tracker li .title {
+              color: #2B3D53;
+            }
+            .status-tracker li.active .title {
+              color: #000;
+              font-weight: bold;
+            }
+ 
+            .modal-body input {
+              margin-right: 12px;
+            }
+ 
+            .btn-sm {
+              -webkit-appearance: none;
+              background-color: #f7f7f7;
+              padding: 3px 15px;
+              color: #525252;
+            }
+
+            input[type="checkbox"] {
+              margin: 0;
+            }
+
+            input[type="checkbox"].file-upload {
+              margin-left: 25px;
+              pointer-events:none;
+            }
+
+            #sub-nav {
+              margin: 15px 0 0 0;
+              -webkit-padding-start: 0px;
+              padding: 0;
+            }
+            #sub-nav span {
+              color: #428bca;
+              cursor: pointer;
+            }
+            #sub-nav span.active-link {
+              color: #ff9b0b;
+            }
+            #sub-nav li{
+              display: inline;
+              list-style: none;
+              margin-right: 20px;
+            }
+
+            .required-message {
+              color: red;
+              padding: 5px 0;
+              display: block;
+              font-size: 0.9em;
+            }
+            .fa-asterisk {
+              float: left;
+                color: red;
+                padding: 0 5px;
+                font-size: 0.5em;
+            }
+            .required.control-label:after { 
+               content:" *";
+               color:red;
+            }
+
+            .fa-check {
+              color: #00db34; 
+              font-size: 1.1em;
+            }
+
+            .fa-times {
+              color: #db0000;
+              font-size: 1.1em;
+            }
+
+            .fa-sign-out {
+              font-size: 1.1em;
+            }
+
+            .fa {
+              vertical-align: -1px;
+            }
+
+            .application-status .row {
+              margin-bottom: 5px;
+            }
+
+            .startTermWrapper select, .stateWrapperSelect select {
+              display: block;
+                width: 100%;
+                height: 34px;
+                padding: 6px 12px;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #555;
+                background-color: #fff;
+                background-image: none;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }  
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+        <script src="{!URLFOR($Resource.styles, 'styles/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}"> 
+        </script>
+
+
+    </head>
+</apex:component>

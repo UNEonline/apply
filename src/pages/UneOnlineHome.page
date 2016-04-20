@@ -1,0 +1,174 @@
+<apex:page standardStylesheets="false" sidebar="false" showheader="false" docType="html-5.0" controller="UneOnlineHomeController" action="{!forwardToStartPage}" cache="false">
+   	
+   	<c:Head />
+    <c:Header />
+    <body class="gpLogin-rm">
+        
+        <div class="row wrapper">			
+		  	<div id="forms-container" class="col-lg-8 forms-container">	
+
+				<ul class="nav nav-tabs responsive-tabs">
+					<li class="active">
+						<a data-toggle="tab" href="#program" id="program-link">
+							<span>1. Program</span>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#personal-information" id="personal-information-link">
+							<span>2. Personal Information</span>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#academic-information" id="academic-information-link">
+							<span>3. Academic Information</span>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#signature" id="signature-link">
+							<span>4. E-Signature</span>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="tab" href="#supporting-files" id="supporting-files-link">
+							<span>5. Supporting Documents</span>
+						</a>
+					</li>					
+				</ul>
+
+				<div class="tab-content">
+					<div id="program" class="tab-pane fade in active">
+						<c:APP_Program />
+					</div>
+					<div id="personal-information" class="tab-pane fade">
+						<c:APP_PersonalInformation />
+					</div>
+					<div id="academic-information" class="tab-pane fade">
+						<c:APP_AcademicInformation />
+					</div>
+					<div id="signature" class="tab-pane fade">
+						<c:APP_Signature />
+					</div>
+					<div id="supporting-files" class="tab-pane fade">
+						<c:APP_SupportingFiles />
+					</div>	
+				</div>
+			</div>
+		  	
+		  	<div class="aside col-lg-4">		 
+			    <div class="row ">
+				  	<section id="tracker" class="status-tracker col-md-12">
+				  		<h3>Application Summary</h3>
+						<ul class="summary clearfix">
+							<li class="{!IF(stage == 'inprogress' || stage == 'complete' || stage == 'reviewed','active','')}">
+							    <span class="step"></span>
+							    <span class="title">In progress</span>
+							</li>
+							<li class="{!IF(stage == 'complete' || stage == 'reviewed','active','')}">
+							    <span class="step"></span>
+							    <span class="title">Complete</span>
+							</li>
+							<li class="{!IF(stage == 'reviewed','active','')}">
+							    <span class="step"></span>
+							    <span class="title">Reviewed</span>
+							</li>
+						</ul>
+					</section>
+
+					<section class="application-status col-md-12">
+						<h3>Application Status:</h3>
+						<table>
+						    <tr>
+								<td>1. Program</td>
+						        <td>
+								    <apex:outputPanel rendered="{!programComplete}">&nbsp;<i class="fa fa-check"></i></apex:outputPanel> 
+						        </td>
+						    </tr>							
+						    <tr>
+						    	<td>2. Personal Information</td>
+						        <td>
+								    <apex:outputPanel rendered="{!personalInfoComplete}">&nbsp;<i class="fa fa-check"></i></apex:outputPanel> 
+						        </td> 
+							</tr>  
+						    <tr>
+								<td>3. Academic Information</td> 
+						        <td>
+								    <apex:outputPanel rendered="{!academicInfoComplete}">&nbsp;<i class="fa fa-check"></i></apex:outputPanel>
+						        </td> 
+						    </tr>
+						    <tr>
+								<td>4. E-Signature</td> 
+						        <td>
+								    <apex:outputPanel rendered="{!signatureComplete}">&nbsp;<i class="fa fa-check"></i></apex:outputPanel>
+						        </td>
+						    </tr> 
+						    <tr>
+								<td>5. Supporting Documents</td>
+								<td>
+									<apex:outputPanel rendered="{!supportingFilesComplete}">&nbsp;<i class="fa fa-check"></i></apex:outputPanel>
+								</td>
+						    </tr>
+						</table>	
+					</section>	
+
+					<p class="col-md-12">Your application is complete when all documentation has been received, including all supporting documents.</p>
+				</div>
+				<div class="row ">
+					<c:AsideHelp />
+				</div>	
+		  	</div>
+		</div>
+
+	    <script type="text/javascript">
+
+	    	j$ = jQuery.noConflict();
+
+	    	var step = '{!step}';
+	    	if (step == '2'){
+	    		changeStep('personal-information', '2');
+	    	} else if (step == '3'){
+	    		changeStep('academic-information', '3');
+	    	} else if (step == '5'){
+	    		changeStep('supporting-files', '4');		
+	    	} else if (step == '4'){
+	    		changeStep('signature', '5');
+	    	} else { 
+	    		changeStep('program', '1');
+	    	}
+
+	    	j$('#goto-personal-info').on( "click", function(e) {
+	    		e.preventDefault();
+	    		j$('#personal-information-link').click();
+	    	})
+	    	j$('#goto-academic-info').on( "click", function(e) {
+	    		e.preventDefault();
+	    		j$('#academic-information-link').click();
+	    	})
+	    	j$('#goto-academic-info').on( "click", function(e) {
+	    		e.preventDefault();
+	    		j$('#academic-information-link').click();
+	    	})
+	    	j$('#goto-supporting-files, #link-to-supporting-files').on( "click", function(e) {
+	    		e.preventDefault();
+	    		j$('#supporting-files-link').click();
+	    	})
+	    	j$('#goto-signature').on( "click", function(e) {
+	    		e.preventDefault();
+	    		j$('#signature-link').click();
+	    	})
+
+	    	function changeStep(step, stepNumber) {
+	    		j$('#'+step+'-link').click();
+	    		history.pushState(null, "UNE Apply", "../apex/UneOnlineHome?s="+stepNumber);
+	    	}
+
+	    	function stepForward(step) {
+	    		//alert('stepForward ' + step);
+	    		j$('#'+step+'-link').click();
+	    	}
+
+	    </script>	
+
+	    <c:Footer />
+    </body>
+
+</apex:page>
